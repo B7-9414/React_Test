@@ -1,6 +1,8 @@
 import React, { Component } from 'react'
 import { Line } from 'react-chartjs-2';
-import { BrowserRouter as Router, Switch, Route, Link} from "react-router-dom";
+import Button from 'react-bootstrap/Button'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 export default class EventHandeler extends Component {
 
@@ -11,10 +13,41 @@ export default class EventHandeler extends Component {
         return (
             <div>
                 <Link to="/chart2">
-                    <button renderAs="button">
+                    <Button className="btn btn-success" renderAs="button">
                         <span>Click To redirect</span>
-                    </button>
+                    </Button>
                 </Link>
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">First</th>
+                            <th scope="col">Last</th>
+                            <th scope="col">Handle</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>Mark</td>
+                            <td>Otto</td>
+                            <td>@mdo</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>Jacob</td>
+                            <td>Thornton</td>
+                            <td>@fat</td>
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>Larry</td>
+                            <td>the Bird</td>
+                            <td>@twitter</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         )
     }
