@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+        
+        <script>
+                fetch('https://corona.lmao.ninja/v2/all')
+                .then(response => response.json())
+                .then(data => console.log(data.active));
+        </script>
+</body>
+</html>
+
